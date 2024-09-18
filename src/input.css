@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+
+    .container{
+        @apply w-[90%] mx-auto overflow-hidden;
+    }
+
+    .nav__hamburgerIcon {
+        @apply bg-hamburger size-8 bg-no-repeat bg-center z-50;
+    }
+
+    .bg-image1{
+
+        background-image: url('images/image-about-dark.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100%;
+        min-height: 250px;
+        grid-area: image1;
+    }
+
+    .grid__area-main{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, max-content);
+        grid-template-areas: 
+        "main"
+        "cta"
+        "image1"
+        "about"
+        "image2"
+        ;
+    }
+
+    .grid__area-md{
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-areas: 
+        "main main main main cta cta cta"
+        "main main main main cta cta cta"
+        "main main main main cta cta cta"
+        "image1 image1 about about about image2 image2"
+        "image1 image1 about about about image2 image2"
+        ;
+    }
+
+}
